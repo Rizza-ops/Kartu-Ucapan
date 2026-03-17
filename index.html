@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Secret Message</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,13 +19,13 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 background:linear-gradient(135deg,#111827,#1f2937,#374151);
-overflow:hidden;
 color:white;
+padding:20px;
 }
 
 /* STARS */
@@ -94,40 +97,14 @@ transform:translateX(-600px) translateY(600px) rotate(45deg);
 
 }
 
-.clue-btn{
-
-width:auto;
-padding:4px 10px;
-font-size:13px;
-
-background:transparent;
-border:none;
-
-color:#d1d5db;
-
-cursor:pointer;
-
-margin-top:6px;
-
-opacity:.8;
-transition:.25s;
-
-}
-
-.clue-btn:hover{
-
-opacity:1;
-transform:scale(1.05);
-
-}
-
 /* CARD */
 
 .card{
 
 position:relative;
-width:430px;
-padding:45px;
+width:100%;
+max-width:430px;
+padding:40px;
 
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(15px);
@@ -172,24 +149,26 @@ transform:translateY(0) scale(1);
 h2{
 font-weight:400;
 margin-bottom:15px;
+font-size:22px;
 }
 
 /* INPUT */
 
 input{
 width:100%;
-padding:11px;
+padding:13px;
 border-radius:10px;
 border:none;
 margin-top:10px;
 outline:none;
+font-size:16px;
 }
 
 /* BUTTON */
 
 button{
 margin-top:15px;
-padding:11px;
+padding:13px;
 width:100%;
 border:none;
 border-radius:10px;
@@ -197,6 +176,7 @@ background:white;
 color:#333;
 cursor:pointer;
 transition:.3s;
+font-size:16px;
 }
 
 button:hover{
@@ -230,16 +210,32 @@ margin-top:15px;
 line-height:1.8;
 font-size:15px;
 text-align:left;
+max-height:260px;
+overflow-y:auto;
+padding-right:6px;
 }
 
 .text p{
 margin-bottom:16px;
 }
 
+/* MOBILE */
+
+@media (max-width:480px){
+
+.card{
+padding:28px;
+}
+
+h2{
+font-size:20px;
+}
+
 .text{
-max-height:260px;
-overflow-y:auto;
-padding-right:6px;
+max-height:320px;
+font-size:14px;
+}
+
 }
 
 </style>
@@ -296,11 +292,11 @@ const message = [
 
 `Maaf yeah karna telat memberi special gift 4u jadi bingung ini kado ultah apa thr. pertama tama ucapan terimakasih lagi karna aku pikir masa kita memang udah habis dan kita asing gitu aja ahahaha ternyata aku dikejutkan ketika bukber deh, jujur itu aslinya salting banget cuman sok cool aja.`,
 
-`Aku ucapin terimakasih ya udah jd seseorang yg baik dan pengertian ke semua orang meski ga semua orang membalasmu dengan setara ditambah lagi positif vibesmu masih berasa sampe sekarang anjay, Bahkan aku ngepeppun kamu memikirkan penyebabnya loh ahahaha, sebenernya mah buat nenangin pikiran doang ditambah lagi aku ga ada tempat untuk mengutarakan semua bebanku jd aku beralih ke panggunaan nikotin tp ga yg kecanduan kok tenang ajh. mmmm dan pesanku yg terakhirr walaupun umur udah tambah tua tp sifatmu ttp dipertahanin terus yeahhhh tetep jadi orang baik yang aku kenal.`,
+`Aku ucapin terimakasih ya udah jd seseorang yg baik dan pengertian ke semua orang meski ga semua orang membalasmu dengan setara ditambah lagi positif vibesmu masih berasa sampe sekarang anjay, Bahkan aku ngepeppun kamu mempertanyakan loh ahahaha, sebenernya mah buat nenangin pikiran doang ditambah lagi aku ga ada tempat untuk mengutarakan semua bebanku jd aku beralih ke panggunaan nikotin tp ga yg kecanduan kok tenang ajh.`,
 
-`ada sedikit pengakuan dosa sih, aku minta maaf banget sebanget bangetnya ya klo keliatan ngehindar bukan karena apa tp karna u jg udh punya cwo ye kan dan aku gamau keterusan karna sekarang aku percaya klo cwe sama cwo gabisa jd temen deket (u know wht i mean). semoga bahagia dengan pilihanmu ueueueue bahagia trs kackkk.`,
+`ada sedikit pengakuan dosa sih, aku minta maaf banget sebanget bangetnya ya klo keliatan ngehindar bukan karena apa tp karna u jg udh punya cwo ye kan dan aku gamau keterusan karna sekarang aku percaya klo cwe sama cwo gabisa jd temen deket.`,
 
-`Semoga suka sama kadonyaaaa meski cuman sedikit tp aku ngeliat u pake ini bakal cakep deh apalagi buat main beuh.`
+`Semoga suka sama kadonyaaaa meski cuman sedikit tp aku ngeliat u pake ini bakal cakep deh apalagi buat main.`
 
 ]
 
